@@ -1,0 +1,272 @@
+{
+   "curso": [
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "PRG" },
+               "alumno": { "S": "Juan Martinez" },
+               "curso": { "N": "2023" },
+               "nota": { "L": [ { "N": "8.5" } ] },
+               "convocatoria": { "N": "1" } 
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "PRG" },
+               "alumno": { "S": "Ana Suarez" },
+               "curso": { "N": "2022" },
+               "convocatoria": { "N": "4" },
+               "nota": { "L": [ { "N": "2"}, { "N": "3.5" }, { "N": "3" }, { "N": "4" }] },
+               "observaciones": { "S": "No estudia" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "PRG" },
+               "alumno": { "S": "Antonio Aparicio" },
+               "curso": { "N": "2023" },
+               "nota":  { "L": [ { "N": "4.5" }, { "N": "7" } ] },
+               "convocatoria": { "N": "2" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "PRG" },
+               "alumno": { "S": "Sofia Diaz" },
+               "curso": { "N": "2022" },
+               "nota": { "L": [ { "N": "9" } ] },
+               "observaciones": { "S": "Excelente alumna" },
+               "convocatoria": { "N": "1" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "PRG" },
+               "alumno": { "S": "Andres Lledo" },
+               "curso": { "N": "2023" },
+               "convocatoria": { "N": "2" },
+               "nota": { "L": [ { "N": "3" }, { "N": "7" } ] }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "PRG" },
+               "alumno": { "S": "Lujan Torres" },
+               "curso": { "N": "2022" },
+               "nota": { "L": [ { "N": "5.75" } ] },
+               "convocatoria": { "N": "1" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "PRG" },
+               "alumno": { "S": "Belen Perello" },
+               "curso": { "N": "2023" },
+               "nota": { "L": [ { "N": "4.5" } ] },
+               "convocatoria": { "N": "1" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "PRG" },
+               "alumno": { "S": "Simon Miranda" },
+               "curso": { "N": "2022" },
+               "convocatoria": { "N": "3" },
+               "nota": { "L": [ { "N": "4" }, { "N": "3.5" }, { "N": "6" } ] }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "LMSI" },
+               "alumno": { "S": "Juan Martinez" },
+               "curso": { "N": "2023" },
+               "nota": { "L": [ { "N": "8" } ] },
+               "convocatoria": { "N": "1" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "LMSI" },
+               "alumno": { "S": "Ana Suarez" },
+               "curso": { "N": "2022" },
+               "convocatoria": { "N": "2" },
+               "nota": { "L": [ { "N": "2" }, { "N": "4" } ] },
+               "observaciones": { "S": "No estudia" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "LMSI" },
+               "alumno": { "S": "Antonio Aparicio" },
+               "curso": { "N": "2023" },
+               "nota":  { "L": [ { "N": "9.5" } ] },
+               "convocatoria": { "N": "1" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "LMSI" },
+               "alumno": { "S": "Sofia Diaz" },
+               "curso": { "N": "2022" },
+               "nota": { "L": [ { "N" : "9.5" } ] },
+               "observaciones": { "S": "Muy estudiosa" },
+               "convocatoria": { "N": "1" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "LMSI" },
+               "alumno": { "S": "Andres Lledo" },
+               "curso": { "N": "2023" },
+               "convocatoria": { "N": "2" },
+               "nota": { "L": [ { "N": "3" }, { "N": "6" } ] }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "LMSI" },
+               "alumno": { "S": "Lujan Torres" },
+               "curso": { "N": "2022" },
+               "nota": { "L": [ { "N": "4" }, { "N": "6" } ] },
+               "convocatoria": { "N": "2" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "LMSI" },
+               "alumno": { "S": "Belen Perello" },
+               "curso": { "N": "2023" },
+               "nota": { "L": [ { "N" : "6.5" } ] },
+               "convocatoria": { "N": "1" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "LMSI" },
+               "alumno": { "S": "Simon Miranda" },
+               "curso": { "N": "2022" },
+               "convocatoria": { "N": "2" },
+               "nota": { "L": [ { "N": "3" }, { "N": "7" } ] }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "ED" },
+               "alumno": { "S": "Juan Martinez" },
+               "curso": { "N": "2023" },
+               "nota": { "L": [ { "N": "3.5"} , { "N": "7.5" } ] },
+               "convocatoria": { "N": "2" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "ED" },
+               "alumno": { "S": "Ana Suarez" },
+               "curso": { "N": "2022" },
+               "convocatoria": { "N": "3" },
+               "nota": { "L": [ { "N": "1" }, { "N": "3" }, { "N": "5" } ] }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "ED" },
+               "alumno": { "S": "Antonio Aparicio" },
+               "curso": { "N": "2023" },
+               "nota": { "L": [ { "N": "8" } ] },
+               "convocatoria": { "N": "1" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "ED" },
+               "alumno": { "S": "Sofia Diaz" },
+               "curso": { "N": "2022" },
+               "nota": { "L": [ { "N": "9.75" } ] },
+               "convocatoria": { "N": "1" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "ED" },
+               "alumno": { "S": "Andres Lledo" },
+               "curso": { "N": "2023" },
+               "nota": { "L": [ { "N": "5" } ] },
+               "convocatoria": { "N": "1" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "ED" },
+               "alumno": { "S": "Lujan Torres" },
+               "curso": { "N": "2022" },
+               "nota": { "L": [ { "N": "7.5" } ] },
+               "convocatoria": { "N": "1" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "ED" },
+               "alumno": { "S": "Belen Perello" },
+               "curso": { "N": "2023" },
+               "nota": { "L": [ { "N": "6" } ] },
+               "convocatoria": { "N": "1" }
+            }
+         }
+      },
+      {
+         "PutRequest": {
+            "Item": {
+               "modulo": { "S": "ED" },
+               "alumno": { "S": "Simon Miranda" },
+               "curso": { "N": "2022" },
+               "convocatoria": { "N": "2" },
+               "nota": { "L": [ { "N": "4" }, { "N": "7" } ] }
+            }
+         }
+      }
+   ]
+}

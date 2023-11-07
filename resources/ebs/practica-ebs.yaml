@@ -1,0 +1,96 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Crea una instancia EC2 con dos volumenes EBS
+Parameters:
+  UltimaAMI:
+    Type:  'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+    Default: '/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-arm64-gp2'
+Resources:
+  InstanciaEC2A:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t4g.micro
+      AvailabilityZone: 
+        Fn::Select: 
+          - 0
+          - Fn::GetAZs: ""
+      SecurityGroups: [!Ref GrupoSeguridad]
+      ImageId: !Ref UltimaAMI
+      IamInstanceProfile: LabInstanceProfile
+      BlockDeviceMappings:
+        - DeviceName: "/dev/sdf"
+          Ebs:
+            VolumeSize: 10
+            Encrypted: true
+            DeleteOnTermination: true
+            VolumeType: gp3
+        - DeviceName: "/dev/sdg"
+          Ebs:
+            VolumeSize: 15
+            Encrypted: false
+            DeleteOnTermination: true
+            VolumeType: gp3
+      PropagateTagsToVolumeOnCreation: true
+      Tags:
+        - Key: Name
+          Value: Instancia-EBS-A
+      UserData:
+        Fn::Base64:
+          !Sub |
+            #!/bin/bash
+            yum update -y
+            yum install -y tree
+            mkdir /mnt/sdf /mnt/sdg
+            mkfs -t ext4 /dev/sdf
+            mkfs -t ext4 /dev/sdg
+            mount -t ext4 /dev/sdf /mnt/sdf
+            mount -t ext4 /dev/sdg /mnt/sdg
+            echo "UUID=$(blkid -s UUID -o value /dev/sdf) /mnt/sdf ext4 defaults,nofail" >> /etc/fstab
+            echo "UUID=$(blkid -s UUID -o value /dev/sdg) /mnt/sdg ext4 defaults,nofail" >> /etc/fstab
+            echo "Archivo de texto 1" > /mnt/sdf/texto1.txt
+            echo "Archivo de texto 2" > /mnt/sdg/texto2.txt
+  InstanciaEC2B:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t4g.micro
+      AvailabilityZone: 
+        Fn::Select: 
+          - 1
+          - Fn::GetAZs: ""
+      SecurityGroups: [!Ref GrupoSeguridad]
+      ImageId: !Ref UltimaAMI
+      IamInstanceProfile: LabInstanceProfile
+      PropagateTagsToVolumeOnCreation: true
+      Tags:
+        - Key: Name
+          Value: Instancia-EBS-B
+      UserData:
+        Fn::Base64:
+          !Sub |
+            #!/bin/bash
+            yum update -y
+            yum install -y tree
+  InstanciaEC2C:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t4g.micro
+      AvailabilityZone: 
+        Fn::Select: 
+          - 2
+          - Fn::GetAZs: ""
+      SecurityGroups: [!Ref GrupoSeguridad]
+      ImageId: !Ref UltimaAMI
+      IamInstanceProfile: LabInstanceProfile
+      PropagateTagsToVolumeOnCreation: true
+      Tags:
+        - Key: Name
+          Value: Instancia-EBS-C
+      UserData:
+        Fn::Base64:
+          !Sub |
+            #!/bin/bash
+            yum update -y
+            yum install -y tree
+  GrupoSeguridad:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Sin acceso de entrada
